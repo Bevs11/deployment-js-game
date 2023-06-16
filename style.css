@@ -1,0 +1,189 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+#game {
+    position: relative;
+    width: 500px;
+    height: 200px;
+    border: 1px solid white;
+    margin: 20px auto;
+    overflow: hidden;
+    /* to keep the objects to stay inside box */
+}
+
+#moon {
+    z-index: -1;
+    left: 0px;
+
+}
+
+.moonAnimation {
+    animation: moonAnimate 60s infinite linear;
+}
+
+@keyframes moonAnimate {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: -480px;
+    }
+}
+
+#playAgain {
+    background-color: aquamarine;
+    border-radius: 5px;
+}
+
+#character {
+    z-index: 1;
+    width: 50px;
+    bottom: 20;
+    left: 20px;
+}
+
+#block,
+#block2 {
+    width: 40px;
+    height: 40px;
+    bottom: 0;
+    left: 500px;
+}
+
+#star {
+    width: 30px;
+    height: 30px;
+    top: 80px;
+    left: 500px;
+}
+
+/*Possition absolute for several elements*/
+#moon,
+#currentScore,
+#star,
+#block,
+#block2,
+#character,
+#ground,
+#moving-ground,
+#moving-ground2,
+#buildings,
+#buildings2 {
+    position: absolute;
+}
+
+/*Position of background assets*/
+#ground,
+#moving-ground {
+    width: 500px;
+    left: 0;
+    bottom: 0;
+}
+
+#moving-ground2 {
+    width: 500px;
+    left: 500px;
+    bottom: 0;
+}
+
+#buildings {
+    width: 500px;
+    left: 0;
+    bottom: 30px;
+}
+
+#buildings2 {
+    width: 500px;
+    left: 500px;
+    bottom: 30px;
+}
+
+/*the following are classes to be added after the game starts and will be removed once the game finishes*/
+.moving-ground {
+    animation: move infinite linear;
+    animation-duration: 6s;
+}
+
+.moving-ground2 {
+    animation: move infinite linear;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.moving-buildings {
+    animation: move infinite linear;
+    animation-duration: 8s;
+}
+
+.moving-buildings2 {
+    animation: move infinite linear;
+    animation-duration: 8s;
+    animation-delay: 4s;
+}
+
+@keyframes move {
+    0% {
+        left: 500px;
+    }
+
+    100% {
+        left: -500px;
+    }
+}
+
+#currentScore {
+    width: 80px;
+    color: white;
+    right: 50px;
+    top: 5px;
+    z-index: 1;
+}
+
+.flex-centered {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    width: 300px;
+}
+
+.youLose,
+.hidden {
+    visibility: hidden;
+}
+
+.text {
+    color: white;
+    text-align: center;
+}
+
+.float {
+    float: inline-start;
+}
+
+.absolute {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.difficulty-btn {
+    width: 50px;
+    background-color: yellowgreen;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+}

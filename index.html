@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" onclick="jump()">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghostly Drift</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="flex-centered">
+        <img src="assets/title.jpg" class="title">
+    </div>
+
+    <div id="game">
+        <img src="assets/ground.png" id="ground">
+        <img src="assets/buildings.png" id="buildings">
+        <img src="assets/buildings.png" id="buildings2">
+        <img src="assets/moving-ground.png" id="moving-ground">
+        <img src="assets/moving-ground.png" id="moving-ground2">
+        <img src="assets/ghost.png" id="character">
+        <img src="assets/obstruction3.png" id="block">
+        <img src="assets/obstruction2.png" id="block2">
+        <img src="assets/star.png" id="star">
+        <img src="assets/moon2.png" id="moon">
+
+        <div id="currentScore"></div>
+
+        <div id="youLose" class="hidden text">
+            <div>
+                <h2 class="inline-block">Your Score:</h2>
+                <h2 id="score" class="inline-block"></h2>
+            </div>
+            <button id="playAgain">Play Again?</button>
+        </div>
+        <div class="start text absolute hidden" id="start">
+            <h1>Let's Play!</h1>
+            <button id="start">Start</button>
+        </div>
+        <div class="text absolute" id="difficulty">
+            <p>Choose the game difficulty</p>
+            <button id="easy" class="difficulty-btn">Easy</button>
+            <button id="hard" class="difficulty-btn">Hard</button>
+        </div>
+    </div>
+
+    <div class="text">
+        <strong>Instructions:</strong>
+        <p>Help the character get the stars and avoid all the ghosts . Press the spacebar to make the character
+            jump.</p>
+    </div>
+
+</body>
+
+</html>
